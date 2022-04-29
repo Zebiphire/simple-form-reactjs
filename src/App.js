@@ -21,26 +21,6 @@ function App() {
   const [step, setStep] = useState(false);
   const [errorPassword, setErrorPassword] = useState(false);
 
-  const handleNameChange = (event) => {
-    const value = event.target.value;
-    setName(value);
-  };
-
-  const handleEmailChange = (event) => {
-    const value = event.target.value;
-    setEmail(value);
-  };
-
-  const handlePasswordChange = (event) => {
-    const value = event.target.value;
-    setPassword(value);
-  };
-
-  const handleConfirmPasswordChange = (event) => {
-    const value = event.target.value;
-    setConfirmPassword(value);
-  };
-
   const handleSubmit = (event) => {
     console.log("=== je suis dans handleSubmit ====");
     console.log(event);
@@ -63,10 +43,10 @@ function App() {
       {step === false ? (
         <Form
           setStep={handleSubmit}
-          setName={handleNameChange}
-          setEmail={handleEmailChange}
-          setPassword={handlePasswordChange}
-          setConfirmPassword={handleConfirmPasswordChange}
+          setName={setName}
+          setEmail={setEmail}
+          setPassword={setPassword}
+          setConfirmPassword={setConfirmPassword}
           setErrorPassword={setErrorPassword}
           name={name}
           email={email}

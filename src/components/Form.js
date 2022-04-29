@@ -28,6 +28,26 @@ const Form = (
   //   }
   // };
 
+  const handleNameChange = (event) => {
+    const value = event.target.value;
+    setName(value);
+  };
+
+  const handleEmailChange = (event) => {
+    const value = event.target.value;
+    setEmail(value);
+  };
+
+  const handlePasswordChange = (event) => {
+    const value = event.target.value;
+    setPassword(value);
+  };
+
+  const handleConfirmPasswordChange = (event) => {
+    const value = event.target.value;
+    setConfirmPassword(value);
+  };
+
   return (
     <form
       onSubmit={() => {
@@ -39,18 +59,14 @@ const Form = (
         placeholder="Name"
         type="text"
         value={name}
-        onChange={(event) => {
-          setName(event.target.value);
-        }}
+        onChange={handleNameChange}
       />
       <span>Email</span>
       <input
         placeholder="Email"
         type="email"
         value={email}
-        onChange={(event) => {
-          setEmail(event.target.value);
-        }}
+        onChange={handleEmailChange}
       />
       <span>Password</span>
       <input
@@ -58,9 +74,7 @@ const Form = (
         placeholder="Password"
         type="password"
         value={password}
-        onChange={(event) => {
-          setPassword(event.target.value);
-        }}
+        onChange={handlePasswordChange}
       />
       <span>Confirm your password</span>
       <input
@@ -68,9 +82,7 @@ const Form = (
         placeholder="Password"
         type="password"
         value={confirmPassword}
-        onChange={(event) => {
-          setConfirmPassword(event.target.value);
-        }}
+        onChange={handleConfirmPasswordChange}
       />
       {errorPassword && (
         <span className="error-password">
