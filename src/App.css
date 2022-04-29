@@ -23,7 +23,7 @@ form {
   justify-content: center;
   align-items: center;
   width: 400px;
-  margin: 15px;
+  margin: 30px;
 }
 
 form span {
@@ -64,7 +64,7 @@ form input {
   background-color: #5c47d3;
   font-size: 15px;
   font-weight: bold;
-  margin: 25px 0 5px 0;
+  margin: 39px 0 5px 0;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
